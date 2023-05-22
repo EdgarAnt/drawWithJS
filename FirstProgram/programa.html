@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First program</title>
+</head>
+
+<!-- Es una area donde puedo graficar o hacer dibujos -->
+        <canvas width="600" height="400">
+
+
+        '</canvas>
+<body>'
+
+    <!-- Code of JS -->
+    <script>
+        //Conectarlo basicamente
+        var pantalla=document.querySelector("canvas");
+        //Y tener el pincel para que te permita hacer todos los graficos basically
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "white"//propiedad
+        pincel.fillRect(0,0,600,400); //funcion
+        
+        pincel.fillStyle = "red";
+        pincel.fillRect(0,0,200,400); //funcion
+        
+        pincel.fillStyle = "blue";
+        pincel.fillRect(400,0,200,400);
+        
+        pincel.fillStyle = "yellow";
+        //Esto es para trazar una ruta
+        pincel.beginPath()
+        //Esto es para definirle la ruta
+        pincel.moveTo(300,200);
+        //Aqui dibujar una liea
+        pincel.lineTo(200,400);
+        pincel.lineTo(400,400);
+        //llenarlo
+        pincel.fill();
+
+        pincel.fillStyle = "blue";
+        //Esto es para trazar una ruta
+        pincel.beginPath()
+        //Primero es la posicion, y lo ultimo es el tamaño del ardio (????)
+        pincel.arc(300,200,50,0,2*3.14);
+        //llenarlo
+        pincel.fill();
+
+
+    </script>
+</body>
+</html>
