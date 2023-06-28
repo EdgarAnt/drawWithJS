@@ -1,0 +1,53 @@
+<!-- Trying draw a triangule -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstProgram</title>
+</head>
+<body>
+
+    <canvas width="600" height="400">
+
+    </canvas>
+
+    <script>
+        //Basically we are connecting the canvas
+        var pantalla = document.querySelector("canvas");
+        //we are indicated what this is 2d width and heigh
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "lightgrey"; //propiedad
+        //the two first parameters is de positio, 
+        //the second is x,y is the advanced about that 
+        pincel.fillRect(0,0,600,400);//function
+        
+        pincel.fillStyle = "green";
+        pincel.fillRect(0,0,200,400);//
+        
+        pincel.fillStyle = "red";
+        pincel.fillRect(400,0,200,400);//
+        
+        pincel.fillStyle = "yellow";
+        //begin a new way
+        pincel.beginPath();
+        //move in this cord
+        pincel.moveTo(300,200);
+        pincel.lineTo(200,400);
+        pincel.lineTo(400,400);
+        pincel.fill();
+
+        //for the cricle
+        pincel.fillStyle = "blue";
+        //begin a new way
+        pincel.beginPath();
+        //This is for grapic circle
+        //VALUES = x,y,radio,inicioRadio,formulaParaElCirculo
+        pincel.arc(300,200,50,0,2*3.14);
+        pincel.fill();
+
+
+    </script>
+</body>
+</html>
